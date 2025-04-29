@@ -14,9 +14,9 @@ will compile the source code to an executable file.
 The program expects SAM-formatted input strings on standard input and one argument, a region specifier like `chr1:123-456`.
 For example, the command
 ```
-  samtools view aligned_and_sorted_reads.bam chr1:123-456 | ./bamgrep chr1:123-456
+  samtools view aligned_and_sorted_reads.bam chr1:123-456 | ./bamtrim chr1:123-456
 ```
-first filters for reads that (partially) overlap the specified position with `samtools`, and bamgrep then truncates the output reads to only include the specified region.
+first filters for reads that (partially) overlap the specified position with `samtools`, and bamtrim then truncates the output reads to only include the specified region.
 
 ## Limitations
 This is a very quickly hacked-together script that will likely fail in some edge cases. Handle with care.
